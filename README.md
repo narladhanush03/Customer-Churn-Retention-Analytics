@@ -64,8 +64,6 @@ PowerPoint Presentation
 - Seaborn
 - SciPy
 - Scikit-learn
-- PostgreSQL
-- SQL
 - Microsoft Excel
 - Microsoft PowerPoint
 
