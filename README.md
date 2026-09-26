@@ -21,6 +21,74 @@ The analysis covers:
 - Excel-based reporting
 - Retention recommendations
 
+## Project Workflow
+
+```text
+Raw Customer Data
+       ↓
+Data Cleaning & Validation
+       ↓
+Feature Engineering
+       ↓
+Exploratory Data Analysis
+       ↓
+Statistical Analysis
+       ↓
+Predictive Modeling
+       ↓
+Model Evaluation & Comparison
+       ↓
+Churn Probability
+       ↓
+Risk Segmentation
+       ↓
+Customer Value Segmentation
+       ↓
+Revenue Risk Estimation
+       ↓
+Risk Validation & Model Interpretation
+       ↓
+Export Excel Report
+       ↓
+Retention Prioritization
+       ↓
+PowerPoint Presentation
+```
+
+## Tech Stack
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- SciPy
+- Scikit-learn
+- PostgreSQL
+- SQL
+- Microsoft Excel
+- Microsoft PowerPoint
+
+## Project Files
+
+- Telco-Customer-churn-Raw-Dataset.csv — [Click here to preview](https://drive.google.com/file/d/19PKvJRrOpzuQ4guPGAD6pwfJq-Sx7I4q/view?usp=drive_link)
+- Python Notebook.ipynb — [Click here to preview](https://drive.google.com/file/d/1V9i3dgmHyhhOZRur1yB5vtJRy0M_jRqB/view?usp=drive_link)
+- Excel Report — [Click here to preview](customer_churn_analysis.xlsx)
+- PowerPoint Presentation — [Click here to preview](Customer_Churn_Analysis.pptx)
+- [README.md](README.md) — Project documentation
+
+## Project Structure
+
+```text
+Customer-Churn-Analytics/
+│
+├── Telco-Customer-churn-Raw-Dataset.csv
+├── Python Notebook.ipynb
+├── Excel Report.xlsx
+├── PowerPoint Presentation.pptx
+└── README.md
+```
+
 ## Key Results
 
 | Metric | Result |
@@ -60,24 +128,16 @@ The statistical tests showed significant relationships between churn and tenure,
 
 Two classification models were developed and evaluated:
 
-| Model | Accuracy | Precision | Recall | F1 | ROC-AUC |
-|---|---:|---:|---:|---:|---:|
-| Logistic Regression | 79.99% | 65.65% | 51.60% | 57.78% | 84.53% |
-| Random Forest | 78.99% | 63.83% | 48.13% | 54.88% | 82.68% |
-
-Logistic Regression was also used to interpret modeled associations through coefficients and odds ratios.
+- Logistic Regression
+- Random Forest
 
 ## Risk Segmentation
 
 Each customer was assigned a predicted churn probability and classified into one of three risk segments:
 
-| Risk Segment | Customers | Actual Churn Rate | Avg. Predicted Risk |
-|---|---:|---:|---:|
-| Low Risk | 4,435 | 10.12% | 9.83% |
-| Medium Risk | 1,618 | 43.14% | 44.44% |
-| High Risk | 990 | 72.93% | 72.51% |
-
-The risk validation shows that observed churn increases substantially across the model's risk segments.
+- Low Risk
+- Medium Risk
+- High Risk
 
 ## Customer Value & Priority Segmentation
 
@@ -95,19 +155,12 @@ This produced six priority groups:
 - Low Value / Medium Risk
 - Low Value / Low Risk
 
-The **High Value / High Risk** segment contained:
-
-- 804 customers
-- 73.01% actual churn rate
-- ₹50,862.13 expected monthly revenue risk
-
 ## Revenue Risk
 
 Expected monthly revenue risk was estimated at the customer level using:
 
 ```text
-Expected Monthly Revenue Risk
-= Monthly Charges × Churn Probability
+Expected Monthly Revenue Risk = Monthly Charges × Churn Probability
 ```
 
 Total estimated monthly revenue risk:
@@ -125,39 +178,6 @@ This represents the model-based monthly revenue exposure associated with predict
 - Fiber-optic service had a **3.47× modeled odds ratio for churn** relative to the reference category, holding other modeled variables constant.
 - Two-year contracts had a **0.23× modeled odds ratio** relative to the reference contract category.
 
-## Project Workflow
-
-```text
-Raw Customer Data
-       ↓
-Data Cleaning & Validation
-       ↓
-Feature Engineering
-       ↓
-Exploratory Data Analysis
-       ↓
-Statistical Analysis
-       ↓
-Predictive Modeling
-       ↓
-Model Evaluation & Comparison
-       ↓
-Churn Probability
-       ↓
-Risk Segmentation
-       ↓
-Customer Value Segmentation
-       ↓
-Revenue Risk Estimation
-       ↓
-Risk Validation & Model Interpretation
-       ↓
-Export Excel Report
-       ↓
-Retention Prioritization
-       ↓
-PowerPoint Presentation
-```
 
 ## Excel Report
 
@@ -189,37 +209,6 @@ Based on the analysis:
 
 5. **Use customer-level churn probabilities** to prioritize retention activity instead of treating all customers equally.
 
-## Tech Stack
-
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- SciPy
-- Scikit-learn
-- PostgreSQL
-- SQL
-- Microsoft Excel
-- Microsoft PowerPoint
-
-## Project Files
-
-- [CC.ipynb](CC.ipynb) — Complete Python analysis, statistical testing, predictive modeling, risk segmentation, revenue-risk analysis, and visualizations
-- [customer_churn_analysis.xlsx](customer_churn_analysis.xlsx) — Final Excel report containing KPIs, priority segments, risk validation, model comparison, feature importance, logistic coefficients, risk deciles, and priority customers
-- [Customer_Churn_Analysis.pptx](Customer_Churn_Analysis.pptx) — PowerPoint presentation summarizing the project, findings, revenue risk, and retention recommendations
-- [README.md](README.md) — Project documentation
-
-## Project Structure
-
-```text
-Customer-Churn-Analytics/
-│
-├── CC.ipynb
-├── customer_churn_analysis.xlsx
-├── Customer_Churn_Analysis.pptx
-└── README.md
-```
 
 ## Key Takeaway
 
